@@ -12,6 +12,11 @@ Convert excel to db-unit xml
 dbx2x convert --file data.xlsx --output data.xml
 ```
 
+Run it from docker
+```shell script
+docker run --rm --name dbx2x ghcr.io/lorislab/dbx2x:latest dbx2x convert --help
+```
+
 ## Dev
 
 ### Test release packages
