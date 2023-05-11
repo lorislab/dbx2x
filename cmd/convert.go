@@ -65,11 +65,6 @@ func addFlagExt(command *cobra.Command, name, shorthand, value, usage string, re
 	return addViper(command, name)
 }
 
-func addBoolFlag(command *cobra.Command, name, shorthand string, value bool, usage string) *pflag.Flag {
-	command.Flags().BoolP(name, shorthand, value, usage)
-	return addViper(command, name)
-}
-
 func addViper(command *cobra.Command, name string) *pflag.Flag {
 	f := command.Flags().Lookup(name)
 	err := viper.BindPFlag(name, f)
